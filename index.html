@@ -1,1 +1,59 @@
 
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <title>Einkaufsliste</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+    }
+
+    h1 {
+      color: #333;
+    }
+
+    button {
+      margin: 5px;
+      padding: 10px 20px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+
+    ul {
+      margin-top: 20px;
+      padding-left: 20px;
+    }
+
+    li {
+      font-size: 18px;
+    }
+  </style>
+</head>
+<body>
+  <h1>🛒 Einkaufsliste</h1>
+
+  <div>
+    <button onclick="addItem('Milch')">Milch</button>
+    <button onclick="addItem('Käse')">Käse</button>
+    <button onclick="addItem('Brot')">Brot</button>
+    <button onclick="addItem('Eier')">Eier</button>
+    <button onclick="addItem('Äpfel')">Äpfel</button>
+  </div>
+
+  <h2>Deine Liste:</h2>
+  <ul id="shoppingList">
+    <!-- Hier erscheinen die Einträge -->
+  </ul>
+
+  <script>
+    function addItem(item) {
+      const list = document.getElementById('shoppingList');
+      const listItem = document.createElement('li');
+      listItem.textContent = item;
+      list.appendChild(listItem);
+    }
+  </script>
+</body>
+</html>
